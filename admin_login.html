@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>התחברות מנהלים</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="admin_login.css"> <!-- קישור ל-CSS -->
+    <script src="admin_login.js" defer></script> <!-- קישור ל-JS -->
+</head>
+<body>
+    <div class="admin-login-form">
+        <h2>התחברות מנהלים</h2>
+        <form id="adminForm" onsubmit="return validateForm()">
+
+            <label for="username">שם משתמש:</label>
+            <input type="text" id="username" name="username" placeholder="הכנס שם משתמש" required>
+
+            <label for="password">סיסמה:</label>
+            <input type="password" id="password" name="password" placeholder="הכנס סיסמה" required>
+
+            <input type="submit" value="התחבר">
+        </form>
+
+        <p id="error-message" class="error-message" style="display: none;">שם המשתמש או הסיסמה שגויים</p>
+    </div>
+
+    <div class="home-button">
+        <label for="action">
+            <a id="action" href="index.html">
+                <span class="material-symbols-outlined">
+                    home
+                    </span>
+            </a>
+        </label>
+    </div>
+    
+<footer>
+    <p>&copy; 2024 IlayFixIT כל הזכויות שמורות</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <title>פתיחת קריאה IT</title>
+  <link rel="stylesheet" href="ticket_form.css">
+</head>
+<body>
+
+  <div class="ticket-form">
+    <h2>פתיחת קריאה לתקלות IT</h2>
+    
+    <h3>בחר סוג הבקשה:</h3>
+    <div class="radio-options">
+      <label>
+        <input type="radio" name="requestType" value="issue">
+        תקלה IT
+      </label>
+      <label>
+        <input type="radio" name="requestType" value="quote">
+        הצעת מחיר
+      </label>
+    </div>
+
+    <!-- טופס תקלה IT -->
+    <form id="issueForm" style="display: none;" method="POST" action="ticket_form.php">
+      <h3>פרטי הפונה</h3>
+      <label for="fullName">שם מלא:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">דואר אלקטרוני:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">טלפון ליצירת קשר:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+     
+
+      <h3>פרטי התקלה</h3>
+      <label>סוג התקלה:</label>
+      <div class="radio-options">
+        <label>
+          <input type="radio" name="issueType" value="network" required>
+          בעיית רשת
+        </label>
+        <label>
+          <input type="radio" name="issueType" value="hardware">
+          בעיית חומרה
+        </label>
+        <label>
+          <input type="radio" name="issueType" value="software">
+          בעיית תוכנה
+        </label>
+        <label>
+          <input type="radio" name="issueType" value="other">
+          אחר
+        </label>
+      </div>
+
+      <!-- שדה מותאם אישית לתקלות מסוג "אחר" -->
+      <div id="customIssue" style="display: none;">
+        <label for="customIssueText">פרט את סוג התקלה:</label>
+        <input type="text" id="customIssueText" name="customIssueText">
+      </div>
+
+      <label for="issueSubject">נושא התקלה:</label>
+      <input type="text" id="issueSubject" name="issueSubject" required>
+
+      <label for="issueDescription">תיאור התקלה:</label>
+      <textarea id="issueDescription" name="issueDescription" rows="6" placeholder="פרט את התקלה בצורה מפורטת" required></textarea>
+
+      <input type="submit" value="פתח קריאה">
+    </form>
+
+    <!-- טופס בקשת הצעת מחיר -->
+    <form id="quoteForm" style="display: none;" method="POST" action="ticket_form.php">
+      <h3>פרטי החברה</h3>
+      <label for="companyName">שם החברה:</label>
+      <input type="text" id="companyName" name="companyName" required>
+
+      <label for="contactName">איש קשר:</label>
+      <input type="text" id="contactName" name="contactName" required>
+
+      <label for="contactEmail">דואר אלקטרוני:</label>
+      <input type="email" id="contactEmail" name="contactEmail" required>
+
+      <label for="contactPhone">טלפון ליצירת קשר:</label>
+      <input type="tel" id="contactPhone" name="contactPhone" required>
+
+      <h3>פירוט השירות הנדרש</h3>
+      <label for="serviceDetails">פרטים:</label>
+      <textarea id="serviceDetails" name="serviceDetails" rows="6" placeholder="פרט את השירותים הנדרשים" required></textarea>
+
+      <input type="submit" value="שלח בקשה">
+    </form>
+  </div>
+  <div class="home-button">
+    <label for="action">
+        <a id="action" href="index.html">
+            <span class="material-symbols-outlined">
+                home
+                </span>
+        </a>
+    </label>
+</div>
+
+  <footer>
+    &copy; 2025 כל הזכויות שמורות
+  </footer>
+
+  <script src="ticket_form.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* עיצוב לכל התגית*/
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4;
+    color: #333; 
+    margin: 0; /*מחוץ לגבולות המוגדרים*/
+    padding: 0; /*בתוך הגבולות המוגדרים*/
+}
+
+/*עיצוב האייקון שייבאתי*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/*עיצוב המזהה(ID)*/
+#close, #open{
+    opacity: 0;
+}
+
+
+
+/* עיצוב ה-hero */
+#hero {
+    background-color: #00b3b3;
+    color: white; 
+    text-align: center; 
+    padding: 50px 20px; 
+}
+
+#hero h2 {
+    font-size: 36px; /* גודל טקסט גדול לכותרת */
+    margin-bottom: 10px; /* יצירת מרחב מתחת לכותרת מחוץ לגבולות המוגדרים*/
+}
+
+#hero p {
+    font-size: 20px; 
+    margin-bottom: 20px; /*  רווח מתחת לפסקה מחוץ לגבולות המוגדרים*/
+}
+
+/*עיצוב הכפתור של הלמד עוד*/
+.cta-btn {
+    background-color: #333; 
+    color: white; 
+    padding: 10px 20px; /* עושה רווח פנימי בכפתור */
+    text-decoration: none; /* מסיר את הקו תחתון */
+    border-radius: 5px; /* פינות מעוגלות */
+}
+
+.cta-btn:hover {
+    background-color: #555; /* שינוי צבע רקע כאשר העכבר מעל הכפתור */
+}
+
+/*  מעצב את הסקשן של שירותים */
+#about, #services {
+    padding: 40px 20px; /* עושה רווח פנימי */
+    text-align: center;
+}
+
+#about p, #services p {
+    margin-bottom: 20px; 
+}
+
+.navbar-container{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    background-color: #1a1a1a;
+}
+
+.navbar-container a:hover {
+    background-color: #707070;
+    color: white;
+    border-radius: 7vh;
+}
+
+
+
+.material-symbols-outlined{
+    color: rgb(255, 255, 255);
+    margin-right: auto;
+}
+
+#menu-open{
+    display: none
+}
+
+.open-menu-button, .close-menu-button{
+    display:none;
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    background-color: #1a1a1a;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+#logo{
+    height: 100px;
+}
+
+/* עיצוב הפוטר */
+footer {
+    text-align: center;
+    padding: 1px 0;
+    background-color: #333; /* צבע רקע כהה לפוטר */
+    color: rgb(255, 255, 255); /* צבע טקסט לבן */
+    position:static; /* ממקם את הפוטר תמיד בתחתית */
+    bottom: 0; /* ממקם את הפוטר בדיוק בתחתית */
+    width: 100%; /* רוחב מלא לפוטר */
+    height: 6%;
+}
+
+
+/* Media Queries - התאמה למסכים קטנים */
+
+
+@media(max-width: 560px){
+
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #logo{
+        display: none;
+    }
+    
+
+    .navbar-container{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 200px;
+        height: 100vh;
+        background-color: #1a1a1a;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.5s ease-out;
+    }
+    nav a{
+        color: rgb(255, 255, 255);
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-menu-button, .close-menu-button{
+        display: block;
+        padding: 20px;
+    }
+    #menu-open:checked ~ .navbar-container{
+        right: 0;
+    }
+
+    #menu-open:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background: rgba(255, 255, 255, 0.2);
+        transition: 1s ease-out;
+}
+}

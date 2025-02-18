@@ -1,0 +1,122 @@
+/* אפס את העמוד */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* גובה העמוד כולו */
+    background-color: #f5f5f5;
+}
+
+.signin-container {
+    flex: 1; /* ימלא את כל השטח הפנוי */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.signin-form {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.signin-form h2 {
+    text-align: center;
+    color: #00b3b3;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #00b3b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #00b3b3;
+}
+
+/* קישור חזרה לדף הבית */
+.return-home {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.return-home a {
+    color: #00b3b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.return-home a:hover {
+    text-decoration: underline;
+}
+
+
+.home-button {
+    position: fixed; /* כדי למקם את הכפתור בצורה קבועה */
+    bottom: 40px;    /* מרחק מהחלק התחתון של המסך */
+    right: 0px;     /* מרחק מהצד הימני של המסך */
+    display: flex;   /* ליישור תוכן בתוך הכפתור */
+    align-items: center;
+    justify-content: center;
+    width: 60px;     /* גודל הכפתור */
+    height: 80px;    /* גובה הכפתור */
+    color: #000000;    /* צבע האייקון */
+    border-radius: 50%; /* צורה עגולה */
+}
+
+.home-button:hover {
+    background-color: #ffffffab; /* צבע רקע בעת ריחוף */
+}
+
+ion-icon {
+    font-size: 27px; /* גודל האייקון */
+}
+
+#action {
+    color: #00b3b3;
+}
+
+/* עיצוב הפוטר */
+footer {
+    text-align: center;
+    padding: 1px 0;
+    background-color: #333; /* צבע רקע כהה לפוטר */
+    color: rgb(255, 255, 255); /* צבע טקסט לבן */
+    position: fixed; /* ממקם את הפוטר תמיד בתחתית */
+    bottom: 0; /* ממקם את הפוטר בדיוק בתחתית */
+    width: 100%; /* רוחב מלא לפוטר */
+    height: 6%;
+}

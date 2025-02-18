@@ -1,0 +1,118 @@
+/* כללי */
+body {
+    font-family: Arial, sans-serif; /* הגדרת סוג הגופן */
+    background-color: #f4f4f4; /* צבע רקע לדף */
+    color: #333; /* צבע הטקסט */
+    margin: 0; /* ביטול רווחים חיצוניים */
+    padding: 0; /* ביטול רווחים פנימיים */
+    display: flex; /* הפעלת Flexbox */
+    flex-direction: column; /* עיצוב התוכן בצורה אנכית */
+    justify-content: center; /* מרכז את התוכן בצורה אופקית */
+    align-items: center; /* מרכז את התוכן בצורה אנכית */
+    height: 100vh; /* גובה הדף יהיה בגובה המסך */
+    overflow-y: auto; 
+}   
+/* טופס */
+.signup-form {
+    background-color: #fff; /* צבע הרקע של הטופס */
+    padding: 20px 30px; /* ריפוד פנימי (שמאל/ימין עליון/תחתון) */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 4px 6px #00b3b3(0, 0, 0, 0.2); /* הוספת צלליות */
+    width: 100%; /* הרוחב של הטופס יתפוס את כל הרוחב הזמין */
+    max-width: 400px; /*  זה היה 400 הגדרת רוחב מקסימלי לטופס */
+}
+
+.signup-form h2 {
+    text-align: center; /* יישור הכותרת למרכז */
+    margin-bottom: 20px; /* רווח מתחת לכותרת */
+    color: #00b3b3; /* צבע הכותרת */
+}
+
+.signup-form label {
+    display: block; /* מציג את התוויות כלבנים */
+    margin-bottom: 5px; /* רווח מתחת לתווית */
+    font-weight: bold; /* בולד לתווית */
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 100%; /* שדה הקלט יתפוס את כל הרוחב הזמין */
+    padding: 10px; /* ריפוד פנימי של השדה */
+    margin-bottom: 15px; /* רווח מתחת לשדות */
+    border: 1px solid #ddd; /* צבע גבול בהיר */
+    border-radius: 5px; /* פינות מעוגלות לשדה */
+    box-sizing: border-box; /* כולל את הריפוד והגבול בחישוב הרוחב */
+    font-size: 16px; /* גודל הגופן בשדות הקלט */
+}
+
+
+button {
+    background-color: #00b3b3; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100vh; 
+    max-width: 40vh; 
+    display: block;
+    margin: 20px auto; 
+    text-align: center;
+}
+
+button:hover {
+    background-color: #00b3b3; /* כהה יותר בעת ריחוף */
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 8px color #00b3b3;
+}
+
+
+
+.home-button {
+    position: fixed; 
+    bottom: 20px;    
+    right: 0px;     /* מרחק מהצד הימני של המסך */
+    display: flex;   /* ליישור תוכן בתוך הכפתור */
+    align-items: center;
+    justify-content: center;
+    width: 60px;     /* גודל הכפתור */
+    height: 80px;    /* גובה הכפתור */
+    color: #000000;    /* צבע האייקון */
+    border-radius: 50%; /* צורה עגולה */
+}
+
+.home-button:hover {
+    background-color: #ffffffab; /* צבע רקע בעת ריחוף */
+}
+
+ion-icon {
+    font-size: 27px; /* גודל האייקון */
+}
+
+#action {
+    color: #00b3b3;
+}
+
+/* עיצוב הפוטר */
+footer {
+    text-align: center;
+    padding: 1px 0;
+    background-color: #333; /* צבע רקע כהה לפוטר */
+    color: rgb(255, 255, 255); /* צבע טקסט לבן */
+    position: absolute; /* ממקם את הפוטר תמיד בתחתית */
+    bottom: 0; /* ממקם את הפוטר בדיוק בתחתית */
+    width: 200vh; /* רוחב מלא לפוטר */
+    height: 5%;
+    right: 0
+}

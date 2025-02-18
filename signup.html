@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס הרשמה</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="signup.css"> <!-- קישור ל-CSS -->
+    <script src="signup.js" defer></script> <!-- קישור ל-JS -->
+</head>
+<body>
+    <div class="signup-form">
+        <h2>טופס הרשמה</h2>
+        <form action="signup.php" id="signup" name="signup" method="POST" onsubmit="return validateForm()"> <!-- קריאה לפונקציה validateForm -->
+            <!-- שם פרטי -->
+            <label for="fname">שם פרטי:</label>
+            <input type="text" id="fname" name="fname" placeholder="הכנס שם פרטי" required>
+            
+            <!-- שם משפחה -->
+            <label for="lname">שם משפחה:</label>
+            <input type="text" id="lname" name="lname" placeholder="הכנס שם משפחה" required>
+            
+            <!-- אימייל -->
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" name="email" placeholder="הכנס כתובת אימייל" required>
+
+            <!-- מספר פלאפון -->
+            <label for="phone_number">מספר פלאפון:</label>
+            <input type="text" id="phone_number" name="phone_number" placeholder="הכנס מספר פלאפון" required>
+            
+            <!-- שם משתמש -->
+            <label for="username">שם משתמש:</label>
+            <input type="text" id="username" name="username" placeholder="הכנס שם משתמש" required>
+
+            <!-- סיסמה -->
+            <label for="password">סיסמה:</label>
+            <input type="password" id="password" name="password" placeholder="הכנס סיסמה" required>
+
+            <!-- כפתור שליחה -->
+            <button type="submit">הרשמה</button>
+        </form>
+
+        <div class="home-button">
+            <label for="action">
+                <a id="action" href="index.html">
+                    <span class="material-symbols-outlined">
+                        home
+                    </span>
+                </a>
+            </label>
+        </div>
+        
+            <!-- פוטר -->
+            <footer>
+                <p rtl="rtl">&copy;2024 IlayFixIT כל הזכויות שמורות</p> 
+            </footer>
+        </body>
+        </html>
+        

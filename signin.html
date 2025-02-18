@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"> <!-- תמיכה בעברית וכיווניות מימין לשמאל -->
+<head>
+    <meta charset="UTF-8"> <!-- תמיכה בעברית -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- תמיכה ברספונסיביות -->
+    <title>טופס התחברות</title> <!-- כותרת הדף -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="signin.css"> <!-- קישור לקובץ ה-CSS -->
+    <script src="signin.js" defer></script> <!-- קישור לקובץ ה-JavaScript -->
+</head>
+<body>
+    <!-- קונטיינר מרכזי -->
+    <div class="signin-container">
+        <!-- טופס ההתחברות -->
+        <div class="signin-form">
+            <h2>טופס התחברות</h2>
+            <form action="signin.php" method="post" onsubmit="return validateSigninForm()">
+                <!-- שדה שם משתמש -->
+                <label for="username">שם משתמש:</label>
+                <input type="text" id="username" name="username" placeholder="הכנס שם משתמש" required>
+
+                <!-- שדה סיסמה -->
+                <label for="password">סיסמה:</label>
+                <input type="password" id="password" name="password" placeholder="הכנס סיסמה" required>
+
+                <!-- כפתור התחברות -->
+                <input type="submit" value="התחבר">
+            </form>
+        </div>
+
+        <div class="home-button">
+            <label for="action">
+                <a id="action" href="index.html">
+                    <span class="material-symbols-outlined">
+                        home
+                        </span>
+                </a>
+            </label>
+        </div>
+        
+    <footer>
+        <p>&copy; 2024 IlayFixIT כל הזכויות שמורות</p>
+    </footer>
+
+     
+</body>
+</html>

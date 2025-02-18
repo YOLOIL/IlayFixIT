@@ -1,0 +1,101 @@
+/* עיצוב בסיסי לגוף הדף */
+body {
+    font-family: Arial, sans-serif; /* גופן ברירת מחדל */
+    direction: rtl; /* יישור טקסט מימין לשמאל */
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* צבע רקע בהיר */
+}
+
+/* עיצוב המעטפת של טופס צור קשר */
+.contact-form {
+    max-width: 500px; /* רוחב מקסימלי לטופס */
+    margin: 50px auto; /* מרכז את הטופס אנכית ואופקית */
+    background: #fff; /* צבע רקע לבן לטופס */
+    padding: 20px; /* ריווח פנימי */
+    border-radius: 8px; /* קצוות מעוגלים */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* צל עדין מסביב לטופס */
+}
+
+/* עיצוב כותרת הטופס */
+.contact-form h2 {
+    text-align: center; /* מרכז את הטקסט */
+    margin-bottom: 20px; /* מרווח מתחת לכותרת */
+    color: #333; /* צבע טקסט כהה */
+}
+
+/* עיצוב התוויות בטופס */
+.contact-form label {
+    display: block; /* כל תווית תתפוס שורה נפרדת */
+    margin-bottom: 5px; /* מרווח קטן מתחת לתווית */
+    font-weight: bold; /* טקסט מודגש */
+}
+
+/* עיצוב שדות הטופס */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%; /* התאמה לרוחב המעטפת */
+    padding: 10px; /* ריווח פנימי */
+    margin-bottom: 15px; /* מרווח בין השדות */
+    border: 1px solid #ccc; /* גבול אפור בהיר */
+    border-radius: 5px; /* קצוות מעוגלים */
+    box-sizing: border-box; /* חישוב גודל כולל של שדות */
+}
+
+/* עיצוב כפתור שליחת הטופס */
+.contact-form input[type="submit"] {
+    background-color: #00b3b3; /* צבע רקע ירוק */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ללא גבול */
+    cursor: pointer; /* סמן של לחצן בעת ריחוף */
+    font-size: 16px; /* גודל טקסט בינוני */
+}
+
+/* אפקט ריחוף על כפתור השליחה */
+.contact-form input[type="submit"]:hover {
+    background-color: #45a049; /* שינוי צבע הרקע בירוק כהה יותר */
+}
+
+/* עיצוב לשדות שאינם חוקיים */
+.contact-form input:invalid {
+    border-color: #020202; /* צבע גבול אדום עבור שגיאות */
+}
+
+.home-button {
+    position: fixed; /* כדי למקם את הכפתור בצורה קבועה */
+    bottom: 40px;    /* מרחק מהחלק התחתון של המסך */
+    right: 0px;     /* מרחק מהצד הימני של המסך */
+    display: flex;   /* ליישור תוכן בתוך הכפתור */
+    align-items: center;
+    justify-content: center;
+    width: 60px;     /* גודל הכפתור */
+    height: 80px;    /* גובה הכפתור */
+    color: #000000;    /* צבע האייקון */
+    border-radius: 50%; /* צורה עגולה */
+}
+
+.home-button:hover {
+    background-color: #ffffffab; /* צבע רקע בעת ריחוף */
+}
+
+ion-icon {
+    font-size: 27px; /* גודל האייקון */
+}
+
+#action {
+    color: #00b3b3;
+}
+
+/* עיצוב הפוטר */
+footer {
+    text-align: center;
+    padding: 1px 0;
+    background-color: #333; /* צבע רקע כהה לפוטר */
+    color: rgb(255, 255, 255); /* צבע טקסט לבן */
+    position: fixed; /* ממקם את הפוטר תמיד בתחתית */
+    bottom: 0; /* ממקם את הפוטר בדיוק בתחתית */
+    width: 100%; /* רוחב מלא לפוטר */
+    height: 6%;
+}
+

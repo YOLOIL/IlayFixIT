@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="contact.css"> 
+    <script src="contact.js"></script>
+</head>
+<body>
+    <div class="contact-form">
+        <h2>צור קשר</h2>
+        <form action="ContactHandler.asp" method="post">
+            <!-- שדה להזנת שם מלא -->
+            <label for="name">שם מלא:</label>
+            <input type="text" id="name" name="name" placeholder="הכנס את שמך" required>
+
+            <!-- שדה להזנת כתובת אימייל -->
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" name="email" placeholder="הכנס את כתובת האימייל שלך" required>
+
+            <!-- שדה להזנת מספר טלפון -->
+            <label for="phone">מספר טלפון:</label>
+            <input type="tel" id="phone" name="phone" placeholder="הכנס את מספר הטלפון שלך" pattern="[0-9]{10}" required>
+
+            <!-- תפריט נפתח לבחירת נושא הפנייה -->
+            <label for="subject">נושא הפנייה:</label>
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>בחר נושא</option>
+                <option value="general">שאלה כללית</option>
+                <option value="support">בקשה לתמיכה טכנית</option>
+                <option value="feedback">משוב</option>
+                <option value="other">אחר</option>
+            </select>
+
+            <!-- שדה להזנת הודעה -->
+            <label for="message">הודעה:</label>
+            <textarea id="message" name="message" rows="5" placeholder="כתוב כאן את ההודעה שלך" required></textarea>
+
+            <!-- כפתור לשליחת הטופס -->
+            <input type="submit" value="שלח הודעה">
+        </form>
+    </div>
+    
+    <div class="home-button">
+        <label for="action">
+            <a id="action" href="homepage.html">
+                <span class="material-symbols-outlined">
+                    home
+                    </span>
+            </a>
+        </label>
+    </div>
+    
+<footer>
+    <p>&copy; 2024 IlayFixIT כל הזכויות שמורות</p>
+</footer>
+
+</body>
+</html>

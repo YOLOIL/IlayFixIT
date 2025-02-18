@@ -1,0 +1,143 @@
+/* כללי */
+body {
+    font-family: 'Rubik', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.ticket-form {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    margin: 20px 0;
+    justify-content: center;
+
+}
+
+.ticket-form h2, .ticket-form h3 {
+    text-align: center;
+    color: #00b3b3;
+}
+
+.radio-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="email"]
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="tel"]
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #00b3b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #007a7a;
+    height: 100vh;
+
+}
+
+
+.home-button {
+    position: fixed; /* כדי למקם את הכפתור בצורה קבועה */
+    bottom: 40px;    /* מרחק מהחלק התחתון של המסך */
+    right: 0px;     /* מרחק מהצד הימני של המסך */
+    display: flex;   /* ליישור תוכן בתוך הכפתור */
+    align-items: center;
+    justify-content: center;
+    width: 60px;     /* גודל הכפתור */
+    height: 80px;    /* גובה הכפתור */
+    color: #000000;    /* צבע האייקון */
+    border-radius: 50%; /* צורה עגולה */
+}
+
+.home-button:hover {
+    background-color: #ffffffab; /* צבע רקע בעת ריחוף */
+}
+
+ion-icon {
+    font-size: 27px; 
+}
+
+#action {
+    color: #00b3b3;
+}
+
+/* עיצוב הפוטר */
+footer {
+    text-align: center;
+    padding: 1px 0;
+    background-color: #333; /* צבע רקע כהה לפוטר */
+    color: rgb(255, 255, 255); /* צבע טקסט לבן */
+    position: fixed; /* ממקם את הפוטר תמיד בתחתית */
+    bottom: 0; /* ממקם את הפוטר בדיוק בתחתית */
+    width: 100%; /* רוחב מלא לפוטר */
+    height: 6%;
+}
+
+@media (max-width: 560px) {
+    .ticket-form {
+        max-width: 90%;
+    }
+}
